@@ -1,0 +1,11 @@
+plugin:
+  name: Pretty Cool Analyzer
+  version: 1.0.0
+  author: John Doe
+  description: Note in the entry, must be the POPO of the class that implements SystemPlugin
+  license: MIT
+  website: https://example-plugin.com
+
+entry:
+  entry: Plugin.php
+

@@ -1,0 +1,32 @@
+# Symfony specific ignores
+
+/var/
+/vendor/
+
+# Environment variables
+/.env
+
+# IDE and editor configurations
+/.idea
+/.vscode
+
+# System files
+.DS_Store
+
+# Log files
+*.log
+
+# PHPUnit specific ignores
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> phpstan/phpstan ###
+phpstan.neon
+###< phpstan/phpstan ###
+
+###> squizlabs/php_codesniffer ###
+/.phpcs-cache
+/phpcs.xml
+###< squizlabs/php_codesniffer ###
