@@ -18,6 +18,12 @@ class PrettyCoolAnalyzer implements AnalyzerInterface
 {
     /**
      * The most important part of the analyzer is this method.
+     * This will perform the analysis, the application will
+     * actually call getSignalState() below so ensure it
+     * is wired correctly.
+     *
+     * analyze() is public since we may wan to call it
+     * separately from batch processing.
      */
     public function analyze(AssetInterface $stock): SignalAnalysis
     {
@@ -56,15 +62,21 @@ class PrettyCoolAnalyzer implements AnalyzerInterface
         return new AnalyzerShortName("PCA Analyzer");
     }
 
+    /**
+     * Other than the description there is no need to change this method.
+     * However, you do have control if you want to.
+     */
     public function getSignalState(AssetInterface $stock): SignalState
     {
+        $signalAnalysis = $this->analyze($stock);
+
         return new SignalState(
             $stock,
-            Signal::Buy,
+            $signalAnalysis->getSignal(),
             "Some description",
-            IndicatorType::Metrics,
-            Interval::Daily,
-            "raw value"
+            $this->getIndicatorType(),
+            $this->getInterval(),
+            $signalAnalysis->getRaw(),
         );
     }
 }
