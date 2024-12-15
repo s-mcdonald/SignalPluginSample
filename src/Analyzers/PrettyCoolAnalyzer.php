@@ -25,7 +25,7 @@ class PrettyCoolAnalyzer implements AnalyzerInterface
      * analyze() is public since we may wan to call it
      * separately from batch processing.
      */
-    public function analyze(AssetInterface $stock): SignalAnalysis
+    public function analyze(AssetInterface $asset): SignalAnalysis
     {
         // here is your logic to determine a rating.
 
@@ -66,12 +66,12 @@ class PrettyCoolAnalyzer implements AnalyzerInterface
      * Other than the description there is no need to change this method.
      * However, you do have control if you want to.
      */
-    public function getSignalState(AssetInterface $stock): SignalState
+    public function getSignalState(AssetInterface $asset): SignalState
     {
-        $signalAnalysis = $this->analyze($stock);
+        $signalAnalysis = $this->analyze($asset);
 
         return new SignalState(
-            $stock,
+            $asset,
             $signalAnalysis->getSignal(),
             "Some description",
             $this->getIndicatorType(),

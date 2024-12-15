@@ -10,6 +10,12 @@ The creators, contributors, and maintainers of this app disclaim any liability f
 
 By using this app, you acknowledge and accept that all risks associated with trading are entirely your own.
 
+## Creating a plugin
+Note the Yaml file called plugin.yaml, this must contain an entry/controller pointing to a POPO file.
+The file can be any valid php filename as long as it exist in the root of your project (ex: src/File.php)
+
+You can not have any injected dependencies in the controller.
+
 ## License
 
 This project is licensed under the MIT License. See `LICENSE` for details.

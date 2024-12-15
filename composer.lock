@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/s-mcdonald/SignalCore.git",
-                "reference": "3fd25e0fb68ffd46add64aa84923a8ed0c2afe05"
+                "reference": "98c04a7634ed9c7b316c159409fd1bb14e54e054"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s-mcdonald/SignalCore/zipball/3fd25e0fb68ffd46add64aa84923a8ed0c2afe05",
-                "reference": "3fd25e0fb68ffd46add64aa84923a8ed0c2afe05",
+                "url": "https://api.github.com/repos/s-mcdonald/SignalCore/zipball/98c04a7634ed9c7b316c159409fd1bb14e54e054",
+                "reference": "98c04a7634ed9c7b316c159409fd1bb14e54e054",
                 "shasum": ""
             },
             "require": {
@@ -80,10 +80,10 @@
             ],
             "description": "Core library for the signalz trading platform by CodeLink.",
             "support": {
-                "source": "https://github.com/s-mcdonald/SignalCore/tree/0.0.5",
+                "source": "https://github.com/s-mcdonald/SignalCore/tree/0.1.1",
                 "issues": "https://github.com/s-mcdonald/SignalCore/issues"
             },
-            "time": "2024-12-15T02:58:01+00:00"
+            "time": "2024-12-15T11:52:16+00:00"
         }
     ],
     "packages-dev": [
